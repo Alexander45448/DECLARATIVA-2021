@@ -1,0 +1,29 @@
+% Conteo de 1 a n:
+%En recursion de cola:
+
+contar(N, N):-
+   % =:=(A, N),
+    writeln(N), !.
+
+contar(A, N):-
+    =<(A, N),
+    writeln(A),
+    is(A2, +(A, 1)),
+    contar(A2, N).
+
+
+%En recursio por posposicion:
+
+contar2(A, N):-
+    =:=(A, N),
+    writeln(A), !.
+
+contar2(A, N):-
+    =<(A, N),
+    is(A2, +(A, 1)),
+    contar2(A2, N),
+    writeln(A).
+
+
+% Sumar los enteros entre a y b:
+
